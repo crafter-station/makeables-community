@@ -1,0 +1,53 @@
+---
+name: makeables
+description: Create, edit and render cards and personalized badges with Makeables. Use for layered designs, coordinated card faces, typography, live materials, studio revisions and approved badge publication.
+---
+
+# Makeables
+
+This is a discovery stub. Versioned workflows and design instructions ship
+inside the Makeables CLI; load them from the installed version.
+
+## Set up the CLI
+
+Requires Node.js 22+ and `makeables` 0.1.0 or newer. Check `node --version`
+and `makeables --version`.
+
+If Makeables is missing, too old or does not support `skills get`, check
+`npm view makeables version`. If a compatible release is available, install
+or update it with:
+
+```sh
+npm install --global makeables@latest
+```
+
+Reuse existing installation authorization; otherwise ask once before installing.
+Check the version again after installation. If npm still offers a version below
+0.1.0, explain that the usable CLI release is not yet available and offer the
+browser studio at https://makeables.dev. Do not claim the CLI setup succeeded.
+
+## Load the workflow
+
+Before designing, read:
+
+```sh
+makeables skills get core
+```
+
+Then load only the relevant guide:
+
+- Cards: `makeables skills get cards`.
+- Badges: `makeables skills get badges`; follow the core guide's portrait and
+  display-name intake when a personalized badge needs them.
+- Full design vocabulary: `makeables skills get design`.
+- Image generation or transformations: `makeables skills get images`, only
+  when the requested work needs them.
+
+Use `makeables skills list` for discovery, or `makeables skills get core --full`
+when all guides are useful. Cards do not require a portrait or badge intake.
+Follow the loaded guide for editable documents, rendering, live materials and
+revisions. Preserve the user's artwork and requested scope.
+
+Creating, editing, local saving and export need no account. Publishing is a
+separate action: follow the CLI guide and the user's approval for the exact
+design being shared. Keep the complete editable document or portable bundle.

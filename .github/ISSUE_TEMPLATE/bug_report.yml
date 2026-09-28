@@ -1,0 +1,43 @@
+name: Bug report
+description: Report something that is not working in Makeables.
+title: "[Bug] "
+labels: ["bug"]
+body:
+  - type: dropdown
+    id: area
+    attributes:
+      label: Where does it happen?
+      options:
+        - Card studio
+        - Badge studio
+        - CLI
+        - Agent skill
+        - Gallery or publishing
+        - Other
+    validations:
+      required: true
+  - type: textarea
+    id: reproduction
+    attributes:
+      label: Steps to reproduce
+      description: Include the command or actions that trigger the problem.
+    validations:
+      required: true
+  - type: textarea
+    id: expected
+    attributes:
+      label: Expected behavior
+    validations:
+      required: true
+  - type: textarea
+    id: actual
+    attributes:
+      label: Actual behavior
+      description: Screenshots or logs help. Remove credentials and private session URLs.
+    validations:
+      required: true
+  - type: textarea
+    id: environment
+    attributes:
+      label: Environment
+      description: Browser, operating system, coding agent and makeables --version, as applicable.

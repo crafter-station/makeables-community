@@ -1,0 +1,24 @@
+name: Feature request
+description: Suggest an improvement to Makeables.
+title: "[Feature] "
+labels: ["enhancement"]
+body:
+  - type: textarea
+    id: problem
+    attributes:
+      label: What are you trying to do?
+      description: Describe the goal and what gets in your way today.
+    validations:
+      required: true
+  - type: textarea
+    id: proposal
+    attributes:
+      label: Proposed improvement
+      description: Explain how you would like it to work.
+    validations:
+      required: true
+  - type: textarea
+    id: alternatives
+    attributes:
+      label: Alternatives or references
+      description: Optional examples, sketches or approaches you have considered.
