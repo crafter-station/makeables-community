@@ -14,7 +14,7 @@ npx skills add crafter-station/makeables-community --skill makeables --global
 Select your coding agent when prompted. Omit `--global` for a project-only install. Then ask it to
 use the `makeables` skill.
 
-The skill checks for Node.js 22+ and Makeables 0.2.0 or newer. When installation
+The skill checks for Node.js 22+ and Makeables 0.3.0 or newer. When installation
 is authorized, it installs or updates the CLI if needed, then reads
 `makeables skills get core`. Product workflows and creative guidance are
 bundled with the CLI rather than copied into this repository.
@@ -36,6 +36,17 @@ The agent loads focused instructions with `makeables skills get cards` or
 `makeables skills get badges`. `makeables skills list` lists the available
 guides. Creation and local export require no account; public sharing is a
 separate, approved action.
+
+Cards and badges share one submission flow in the browser and CLI:
+
+```sh
+makeables submit --file design.json --dry-run
+makeables submit --file design.json --yes
+makeables submit status --file design.json
+```
+
+Editable JSON, original card SVGs and portable packages are supported. Designs
+stay private while awaiting review; gallery publication follows admin approval.
 
 ## From a card preview to your phone
 
