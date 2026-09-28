@@ -1,6 +1,6 @@
 ---
 name: makeables
-description: Create, edit and render cards and personalized badges with Makeables. Use for layered designs, coordinated card faces, typography, live materials, studio revisions and approved badge publication.
+description: Create, edit and render cards and personalized badges with Makeables. Use for card designs from prompts, images or original SVGs, layered materials, personalized badges, gallery sharing and requested iPhone Wallet artwork changes.
 ---
 
 # Makeables
@@ -10,7 +10,7 @@ inside the Makeables CLI; load them from the installed version.
 
 ## Set up the CLI
 
-Requires Node.js 22+ and `makeables` 0.1.0 or newer. Check `node --version`
+Requires Node.js 22+ and `makeables` 0.2.0 or newer. Check `node --version`
 and `makeables --version`.
 
 If Makeables is missing, too old or does not support `skills get`, check
@@ -23,7 +23,7 @@ npm install --global makeables@latest
 
 Reuse existing installation authorization; otherwise ask once before installing.
 Check the version again after installation. If npm still offers a version below
-0.1.0, explain that the usable CLI release is not yet available and offer the
+0.2.0, explain that the usable CLI release is not yet available and offer the
 browser studio at https://makeables.dev. Do not claim the CLI setup succeeded.
 
 ## Load the workflow
@@ -36,11 +36,13 @@ makeables skills get core
 
 Then load only the relevant guide:
 
-- Cards: `makeables skills get cards`.
+- Cards, references and original SVG edits: `makeables skills get cards`.
+- Apply, switch or restore an existing Wallet card design: `makeables skills get wallet`.
+  Load it when the user chooses phone installation after a card preview, too.
 - Badges: `makeables skills get badges`; follow the core guide's portrait and
   display-name intake when a personalized badge needs them.
 - Full design vocabulary: `makeables skills get design`.
-- Image generation or transformations: `makeables skills get images`, only
+- Local reference tools, tracing or optional image generation: `makeables skills get images`, only
   when the requested work needs them.
 
 Use `makeables skills list` for discovery, or `makeables skills get core --full`
@@ -51,3 +53,10 @@ revisions. Preserve the user's artwork and requested scope.
 Creating, editing, local saving and export need no account. Publishing is a
 separate action: follow the CLI guide and the user's approval for the exact
 design being shared. Keep the complete editable document or portable bundle.
+
+
+Follow the cards guide's ready-preview handoff: offer to keep iterating,
+submit to the gallery, or install the design on the phone. Respect a choice
+already made for the displayed version. Wallet operations need the user's
+request and an established target; creating a design alone does not authorize
+publication or device changes. Keep original-artwork backups private.

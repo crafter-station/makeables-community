@@ -1,6 +1,6 @@
 # Makeables Community
 
-The public home for the Makeables agent skill, bug reports and feature requests.
+The public home for the Makeables agent skill, Wallet companion downloads, bug reports and feature requests.
 
 [Makeables](https://makeables.dev) is a design studio for cards and personalized
 badges, with editable layers, original SVG artwork and live WebGPU materials.
@@ -8,13 +8,13 @@ badges, with editable layers, original SVG artwork and live WebGPU materials.
 ## Install the skill
 
 ```sh
-npx skills add crafter-station/makeables-community --skill makeables
+npx skills add crafter-station/makeables-community --skill makeables --global
 ```
 
-Select your coding agent and installation scope when prompted. Then ask it to
+Select your coding agent when prompted. Omit `--global` for a project-only install. Then ask it to
 use the `makeables` skill.
 
-The skill checks for Node.js 22+ and Makeables 0.1.0 or newer. When installation
+The skill checks for Node.js 22+ and Makeables 0.2.0 or newer. When installation
 is authorized, it installs or updates the CLI if needed, then reads
 `makeables skills get core`. Product workflows and creative guidance are
 bundled with the CLI rather than copied into this repository.
@@ -37,6 +37,20 @@ The agent loads focused instructions with `makeables skills get cards` or
 guides. Creation and local export require no account; public sharing is a
 separate, approved action.
 
+## From a card preview to your phone
+
+After showing a card, the agent offers to iterate, submit it to the gallery, or
+install the artwork on your phone. If you choose installation, it loads
+`makeables skills get wallet`. `makeables wallet setup` downloads the matching
+Mac companion and verifies the checksum pinned in your CLI version. No source
+checkout, Python installation or Xcode is needed.
+
+The companion applies artwork to an existing Wallet card over USB and preserves
+verified original-artwork backups for restoration. It does not add or remove
+payment cards. This uses experimental, unofficial device services: artwork
+apply has been tested on a Wallet card; restoration on an actual Wallet card
+remains unverified. The website itself never writes to your phone.
+
 ## Bugs and ideas
 
 - [Report a bug](https://github.com/crafter-station/makeables-community/issues/new?template=bug_report.yml)
@@ -44,12 +58,13 @@ separate, approved action.
 - [Browse existing issues](https://github.com/crafter-station/makeables-community/issues)
 
 Include your CLI version when relevant and remove credentials or private studio
-session URLs from logs.
+session URLs from logs. Do not attach Wallet backups, raw device logs or card resource IDs.
 
 ## What lives here
 
 - `skills/makeables/SKILL.md`: the canonical installable discovery stub.
 - `.github/ISSUE_TEMPLATE/`: bug-report and feature-request forms.
+- Releases: versioned macOS Wallet companion archives, with checksums.
 
 The application source and full CLI guides are maintained separately. Update
 this stub when bootstrap or guide discovery changes; design instructions belong
