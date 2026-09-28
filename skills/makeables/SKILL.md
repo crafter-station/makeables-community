@@ -1,6 +1,6 @@
 ---
 name: makeables
-description: Create, edit and render cards and personalized badges with Makeables. Use for card designs from prompts, images or original SVGs, layered materials, personalized badges, gallery sharing and requested iPhone Wallet artwork changes.
+description: Create, edit and render cards, personalized badges and die-cut stickers with Makeables. Use for card designs from prompts, images or original SVGs, layered materials, badges, glitter and holographic stickers, gallery submissions and requested iPhone Wallet artwork changes.
 ---
 
 # Makeables
@@ -10,7 +10,7 @@ inside the Makeables CLI; load them from the installed version.
 
 ## Set up the CLI
 
-Requires Node.js 22+ and `makeables` 0.3.0 or newer. Check `node --version`
+Requires Node.js 22+ and `makeables` 0.4.0 or newer. Check `node --version`
 and `makeables --version`.
 
 If Makeables is missing, too old or does not support `skills get`, check
@@ -23,7 +23,7 @@ npm install --global makeables@latest
 
 Reuse existing installation authorization; otherwise ask once before installing.
 Check the version again after installation. If npm still offers a version below
-0.3.0, explain that the usable CLI release is not yet available and offer the
+0.4.0, explain that the usable CLI release is not yet available and offer the
 browser studio at https://makeables.dev. Do not claim the CLI setup succeeded.
 
 ## Load the workflow
@@ -41,18 +41,20 @@ Then load only the relevant guide:
   Load it when the user chooses phone installation after a card preview, too.
 - Badges: `makeables skills get badges`; follow the core guide's portrait and
   display-name intake when a personalized badge needs them.
+- Stickers: `makeables skills get stickers`; use the shared Design Studio, sidebar
+  gallery and glitter, holographic or vinyl materials. No portrait is needed.
 - Full design vocabulary: `makeables skills get design`.
 - Local reference tools, tracing or optional image generation: `makeables skills get images`, only
   when the requested work needs them.
 
 Use `makeables skills list` for discovery, or `makeables skills get core --full`
-when all guides are useful. Cards do not require a portrait or badge intake.
+when all guides are useful. Cards and stickers do not require a portrait or badge intake.
 Follow the loaded guide for editable documents, rendering, live materials and
 revisions. Preserve the user's artwork and requested scope.
 
 Creating, editing, local saving and export need no account. Publishing is a
 separate action: follow the CLI guide and the user's approval for the exact
-design being shared. Cards and badges use `makeables submit` or the same `/submit`
+design being shared. Cards, badges and stickers use `makeables submit` or the same `/submit`
 form, with admin review. Keep the complete editable document or portable package;
 report pending review separately from public approval.
 
