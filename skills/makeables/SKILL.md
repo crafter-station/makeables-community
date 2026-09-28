@@ -10,7 +10,7 @@ inside the Makeables CLI; load them from the installed version.
 
 ## Set up the CLI
 
-Requires Node.js 22+ and `makeables` 0.2.0 or newer. Check `node --version`
+Requires Node.js 22+ and `makeables` 0.3.0 or newer. Check `node --version`
 and `makeables --version`.
 
 If Makeables is missing, too old or does not support `skills get`, check
@@ -23,7 +23,7 @@ npm install --global makeables@latest
 
 Reuse existing installation authorization; otherwise ask once before installing.
 Check the version again after installation. If npm still offers a version below
-0.2.0, explain that the usable CLI release is not yet available and offer the
+0.3.0, explain that the usable CLI release is not yet available and offer the
 browser studio at https://makeables.dev. Do not claim the CLI setup succeeded.
 
 ## Load the workflow
@@ -52,7 +52,9 @@ revisions. Preserve the user's artwork and requested scope.
 
 Creating, editing, local saving and export need no account. Publishing is a
 separate action: follow the CLI guide and the user's approval for the exact
-design being shared. Keep the complete editable document or portable bundle.
+design being shared. Cards and badges use `makeables submit` or the same `/submit`
+form, with admin review. Keep the complete editable document or portable package;
+report pending review separately from public approval.
 
 
 Follow the cards guide's ready-preview handoff: offer to keep iterating,
