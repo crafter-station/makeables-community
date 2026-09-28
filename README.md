@@ -2,8 +2,8 @@
 
 The public home for the Makeables agent skill, Wallet companion downloads, bug reports and feature requests.
 
-[Makeables](https://makeables.dev) is a design studio for cards and personalized
-badges, with editable layers, original SVG artwork and live WebGPU materials.
+[Makeables](https://makeables.dev) is a design studio for cards, personalized
+badges and die-cut stickers, with editable layers, original SVG artwork and live WebGPU materials.
 
 ## Install the skill
 
@@ -14,7 +14,7 @@ npx skills add crafter-station/makeables-community --skill makeables --global
 Select your coding agent when prompted. Omit `--global` for a project-only install. Then ask it to
 use the `makeables` skill.
 
-The skill checks for Node.js 22+ and Makeables 0.3.0 or newer. When installation
+The skill checks for Node.js 22+ and Makeables 0.4.0 or newer. When installation
 is authorized, it installs or updates the CLI if needed, then reads
 `makeables skills get core`. Product workflows and creative guidance are
 bundled with the CLI rather than copied into this repository.
@@ -32,12 +32,15 @@ network and materials. Keep everything editable.”
 **Badge:** “Use Makeables to create a badge from my photo. My display name is
 Alex. Use expressive typography and a chrome finish, then show me both sides.”
 
-The agent loads focused instructions with `makeables skills get cards` or
-`makeables skills get badges`. `makeables skills list` lists the available
+**Sticker:** “Use Makeables to create an original die-cut sticker with a holographic
+finish. Keep its layers editable and show it in the shared Design Studio.”
+
+The agent loads focused instructions with `makeables skills get cards`,
+`makeables skills get badges` or `makeables skills get stickers`. `makeables skills list` lists the available
 guides. Creation and local export require no account; public sharing is a
 separate, approved action.
 
-Cards and badges share one submission flow in the browser and CLI:
+Cards, badges and stickers share `/submit` in the browser and the same CLI submission flow:
 
 ```sh
 makeables submit --file design.json --dry-run
