@@ -8,7 +8,35 @@ description: Create, edit and render cards, personalized badges and die-cut stic
 This is a discovery stub. Versioned workflows and design instructions ship
 inside the Makeables CLI; load them from the installed version.
 
+## Choose the preview surface
+
+Prefer the simplest available integrated surface:
+
+1. **MCP Apps widget:** use discovered Makeables tools when the host can render
+   their UI resource. Keep edits and previews inside that widget.
+2. **Built-in browser:** if no working Makeables widget is available but the host
+   exposes a browser panel, start `makeables studio start --no-open --json` and
+   open the returned URL there. Reuse one session and tab.
+3. **CLI + image:** otherwise keep the editable JSON locally, render a PNG,
+   inspect it and display it inline in the chat with the saved deliverables.
+
+Detect actual tools and UI capabilities; a client name such as Codex does not
+prove that Makeables MCP Apps is connected. Do not open a default/external browser
+or install/configure an integration just to get a preview. Use the existing
+document/package when falling back, and inspect after a timed-out edit before
+retrying. An explicit user choice of interface takes precedence.
+
+This priority also applies with older CLI guides that default to opening a
+browser or installing agent-browser. Load only the setup required by the selected
+path. CLI + image is a complete workflow, not a reason to stop or ask for setup.
+
 ## Set up the CLI
+
+Skip local CLI setup when a working Makeables MCP connection supplies the tools
+needed for the task. Load its bundled guides with
+`makeables_inspect` (`section: "guide"`, `guide: "core"`), then the relevant
+product guide. Use CLI setup for a fallback or a requested action the connected
+tools do not provide.
 
 Requires Node.js 22+ and `makeables` 0.4.0 or newer. Check `node --version`
 and `makeables --version`.
@@ -24,11 +52,12 @@ npm install --global makeables@latest
 Reuse existing installation authorization; otherwise ask once before installing.
 Check the version again after installation. If npm still offers a version below
 0.4.0, explain that the usable CLI release is not yet available and offer the
-browser studio at https://makeables.dev. Do not claim the CLI setup succeeded.
+studio at https://makeables.dev in an available built-in browser. Do not open an
+external browser automatically or claim the CLI setup succeeded.
 
 ## Load the workflow
 
-Before designing, read:
+For the CLI path, before designing, read:
 
 ```sh
 makeables skills get core
