@@ -8,6 +8,25 @@ description: Create, edit and render cards, personalized badges and die-cut stic
 This is a discovery stub. Versioned workflows and design instructions ship
 inside the Makeables CLI; load them from the installed version.
 
+## Existing Wallet artwork
+
+For a requested iPhone Wallet installation, switch or restore, check the CLI
+and load `makeables skills get wallet` directly. Skip core/cards guides and
+preview-surface discovery unless the user also wants design changes.
+Reuse the confirmed card and verified original-backup receipt.
+
+Check `makeables wallet install --help` before using newer options. When
+`--submission` and `--target` are supported, use the public submission URL/UUID
+directly and a confirmed saved target; no browser export is needed. Otherwise
+follow the installed wallet guide rather than inventing unsupported flags.
+
+For a new target, start the selection process before asking the user to tap;
+wait for `selection-ready` or the legacy successful activity-stream connection.
+The scanner does not disclose bank names or last four digits. Saved labels are
+user-confirmed descriptions. Never infer target identity from artwork numbers,
+tap order, or “Observed card 1”. If several saved cards fit, ask which label they
+want; use a fresh tap for an unregistered card.
+
 ## Choose the preview surface
 
 Prefer the simplest available integrated surface:
