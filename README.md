@@ -3,7 +3,8 @@
 The public home for the Makeables agent skill, Wallet companion downloads, bug reports and feature requests.
 
 [Makeables](https://makeables.dev) is a design studio for cards, personalized
-badges and die-cut stickers, with editable layers, original SVG artwork and live WebGPU materials.
+badges, die-cut stickers, sticker sheets, kits and brand pages. Everything has
+editable layers and live materials.
 
 ## Install the skill
 
@@ -35,12 +36,18 @@ Alex. Use expressive typography and a chrome finish, then show me both sides.”
 **Sticker:** “Use Makeables to create an original die-cut sticker with a holographic
 finish. Keep its layers editable and show it in the shared Design Studio.”
 
+**Event kit:** “Use Makeables to make a kit for https://luma.com/your-event: a card
+and a sheet of stickers with the event cover and the brand's logos.”
+
+**Brand page:** “Use Makeables to turn my kits into a brand page at
+makeables.dev/brands/my-brand.”
+
 The agent loads one focused guide per job with `makeables skills get cards`,
 `badges`, `stickers`, `kits`, `sheets`, `images` or `wallet`. `makeables skills list` lists the available
 guides. Creation and local export require no account; public sharing is a
 separate, approved action.
 
-Cards, badges and stickers share `/submit` in the browser and the same CLI submission flow:
+Cards, badges, stickers, kits and brands share the same CLI submission flow:
 
 ```sh
 makeables submit --file design.json --dry-run
@@ -48,8 +55,9 @@ makeables submit --file design.json --yes
 makeables submit status --file design.json
 ```
 
-Editable JSON, original card SVGs and portable packages are supported. Designs
-stay private while awaiting review; gallery publication follows admin approval.
+Editable JSON, original card SVGs, portable packages, kits and `brand.json` are
+supported. A brand submits its kits first. Everything stays private until an
+admin approves it.
 
 ## From a card preview to your phone
 
