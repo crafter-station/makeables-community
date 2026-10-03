@@ -35,8 +35,8 @@ Alex. Use expressive typography and a chrome finish, then show me both sides.”
 **Sticker:** “Use Makeables to create an original die-cut sticker with a holographic
 finish. Keep its layers editable and show it in the shared Design Studio.”
 
-The agent loads focused instructions with `makeables skills get cards`,
-`makeables skills get badges` or `makeables skills get stickers`. `makeables skills list` lists the available
+The agent loads one focused guide per job with `makeables skills get cards`,
+`badges`, `stickers`, `kits`, `sheets`, `images` or `wallet`. `makeables skills list` lists the available
 guides. Creation and local export require no account; public sharing is a
 separate, approved action.
 

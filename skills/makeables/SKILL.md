@@ -82,22 +82,24 @@ For the CLI path, before designing, read:
 makeables skills get core
 ```
 
-Then load only the relevant guide:
+Then load the one guide for the job:
 
 - Cards, references and original SVG edits: `makeables skills get cards`.
+- Badges, including the portrait and display-name intake: `makeables skills get badges`.
+- Stickers: `makeables skills get stickers`. No portrait is needed.
+- Kits, brands and event packs (a Luma or brand URL counts): `makeables skills get kits`.
+  It starts with `makeables preflight` and asks about the art source before any piece.
+- Print sheets and PDFs: `makeables skills get sheets`.
+- Local image tools and image generation: `makeables skills get images`.
 - Apply, switch or restore an existing Wallet card design: `makeables skills get wallet`.
   Load it when the user chooses phone installation after a card preview, too.
-- Badges: `makeables skills get badges`; follow the core guide's portrait and
-  display-name intake when a personalized badge needs them.
-- Stickers: `makeables skills get stickers`; use the shared Design Studio, sidebar
-  gallery and glitter, holographic or vinyl materials. No portrait is needed.
-- Full design vocabulary: `makeables skills get design`.
-- Local reference tools, tracing or optional image generation: `makeables skills get images`, only
-  when the requested work needs them.
+
+Build with CLI commands (`new`, `layer add`, `layer set`, `badge package`, `kit`,
+`brand`, `sheet`), not custom scripts, hand-assembled packages or the CLI's
+installed source. If a command is missing, tell the user.
 
 Use `makeables skills list` for discovery, or `makeables skills get core --full`
-when all guides are useful. Cards and stickers do not require a portrait or badge intake.
-Follow the loaded guide for editable documents, rendering, live materials and
+when all guides are useful. Follow the loaded guide for editable documents, rendering, live materials and
 revisions. Preserve the user's artwork and requested scope.
 
 Creating, editing, local saving and export need no account. Publishing is a
