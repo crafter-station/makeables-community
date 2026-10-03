@@ -14,7 +14,7 @@ npx skills add crafter-station/makeables-community --skill makeables --global
 Select your coding agent when prompted. Omit `--global` for a project-only install. Then ask it to
 use the `makeables` skill.
 
-The skill checks for Node.js 22+ and Makeables 0.4.0 or newer. When installation
+The skill checks for Node.js 22+ and Makeables 0.11.0 or newer. When installation
 is authorized, it installs or updates the CLI if needed, then reads
 `makeables skills get core`. Product workflows and creative guidance are
 bundled with the CLI rather than copied into this repository.
