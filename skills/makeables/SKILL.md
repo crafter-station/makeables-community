@@ -57,7 +57,7 @@ needed for the task. Load its bundled guides with
 product guide. Use CLI setup for a fallback or a requested action the connected
 tools do not provide.
 
-Requires Node.js 22+ and `makeables` 0.4.0 or newer. Check `node --version`
+Requires Node.js 22+ and `makeables` 0.11.0 or newer. Check `node --version`
 and `makeables --version`.
 
 If Makeables is missing, too old or does not support `skills get`, check
@@ -70,7 +70,7 @@ npm install --global makeables@latest
 
 Reuse existing installation authorization; otherwise ask once before installing.
 Check the version again after installation. If npm still offers a version below
-0.4.0, explain that the usable CLI release is not yet available and offer the
+0.11.0, explain that the usable CLI release is not yet available and offer the
 studio at https://makeables.dev in an available built-in browser. Do not open an
 external browser automatically or claim the CLI setup succeeded.
 
